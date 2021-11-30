@@ -1,19 +1,15 @@
-import Form from '../components/Form'
+import Form from "../components/Form";
 
-const NewPet = () => {
-  const petForm = {
-    name: '',
-    owner_name: '',
-    species: '',
-    age: 0,
-    poddy_trained: false,
-    diet: [],
-    image_url: '',
-    likes: [],
-    dislikes: [],
-  }
+const NewAccount = () => {
+  const accountForm = {
+    name: "",
+    password: "",
+    accountType: false,
+    amount: 0,
+    image_url: "",
+  };
 
-  return <Form formId="add-pet-form" petForm={petForm} />
-}
+  return <Form formId="add-account-form" accountForm={accountForm} />;
+};
 
-export default NewPet
+export default NewAccount;

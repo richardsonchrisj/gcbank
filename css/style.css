@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 
@@ -94,12 +94,12 @@
   font-size: 110%;
 }
 
-.pet-name {
+.account-name {
   font-weight: bold;
   font-size: 130%;
 }
 
-h5.pet-name {
+h5.account-name {
   color: white;
   position: absolute;
   left: 0;
@@ -175,7 +175,7 @@ li {
 }
 
 /* Delete Pet */
-.pet-container {
+.account-container {
   width: 100%;
 }
 
