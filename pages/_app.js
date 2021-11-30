@@ -2,10 +2,11 @@ import "../css/style.css";
 import "../css/form.css";
 import Head from "next/head";
 import Link from "next/link";
+import { Provider } from "next-auth/client";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <Provider session={pageProps.session}>
       <Head>
         <title>Gotham City Bank</title>
       </Head>
@@ -29,7 +30,7 @@ function MyApp({ Component, pageProps }) {
       <div className="grid wrapper">
         <Component {...pageProps} />
       </div>
-    </>
+    </Provider>
   );
 }
 
