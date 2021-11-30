@@ -8,7 +8,7 @@ export default function Index({ accounts }) {
   const [session, loading] = useSession();
 
   return (
-    <main>
+    <>
       {!session && (
         <>
           Not signed in <br />
@@ -17,7 +17,13 @@ export default function Index({ accounts }) {
       )}
       {session && (
         <>
-          Signed in as {session.user.email} <br />
+          <div>
+            {" "}
+            <button>
+              <Link href="/secret">To the Secret</Link>
+            </button>
+          </div>
+
           {/* Create a card for each account */}
           {accounts.map((account) => (
             <div key={account._id}>
@@ -26,7 +32,7 @@ export default function Index({ accounts }) {
                 <h5 className="account-name">{account.name}</h5>
                 <div className="main-content">
                   <p className="account-name">{account.name}</p>
-                  <p className="amount">Amount: ${account.amount}</p>
+                  <p className="amount">Funds: ${account.amount}</p>
 
                   <div className="btn-container">
                     <Link href="/[id]/edit" as={`/${account._id}/edit`}>
@@ -42,7 +48,7 @@ export default function Index({ accounts }) {
           ))}
         </>
       )}
-    </main>
+    </>
   );
 }
 

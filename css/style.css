@@ -20,18 +20,6 @@
   display: inline-block;
   height: 100%;
 }
-.nav {
-  height: 100%;
-  display: inline-block;
-}
-.nav a {
-  margin: 0 20px;
-  font-size: 120%;
-  height: 100%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .grid {
   display: flex;
@@ -89,11 +77,6 @@
   transition: 0.5s all;
 }
 
-.owner {
-  color: grey;
-  font-size: 110%;
-}
-
 .account-name {
   font-weight: bold;
   font-size: 130%;
@@ -112,21 +95,6 @@ h5.account-name {
   padding: 10px;
   padding-top: 0px;
   border-radius: 7px;
-}
-
-li {
-  list-style-type: none;
-  margin: 0;
-}
-
-.info {
-  color: rgb(83, 83, 83);
-  position: relative;
-  overflow: hidden;
-}
-
-.info.likes {
-  margin-top: 25px;
 }
 
 .label {
@@ -174,7 +142,7 @@ li {
   margin-left: 10px;
 }
 
-/* Delete Pet */
+/* Delete Account */
 .account-container {
   width: 100%;
 }

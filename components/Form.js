@@ -132,12 +132,12 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
           onChange={handleChange}
         />
 
-        <label htmlFor="amount">Amount</label>
+        <label htmlFor="amount">Funds</label>
         <input
-          type="text"
+          type="number"
           name="amount"
           pattern="[0-9]*"
-          value={Number(form.amount)}
+          value={form.amount}
           onChange={handleChange}
         />
 
