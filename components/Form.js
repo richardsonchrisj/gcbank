@@ -10,7 +10,6 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
 
   const [form, setForm] = useState({
     name: accountForm.name,
-    password: accountForm.password,
     accountType: accountForm.accountType,
     amount: accountForm.amount,
     image_url: accountForm.image_url,
@@ -92,7 +91,6 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
   const formValidate = () => {
     let err = {};
     if (!form.name) err.name = "Name is required";
-    if (!form.password) err.password = "Password is required";
     if (!form.accountType) err.accountType = "accountType is required";
     if (!form.amount) err.amount = "starting amount is required";
     if (!form.image_url) err.image_url = "Image URL is required";
@@ -109,17 +107,6 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
           name="name"
           autoComplete="name"
           value={form.name}
-          onChange={handleChange}
-          required
-        />
-
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          maxLength="20"
-          name="password"
-          autoComplete="new-password"
-          value={form.password}
           onChange={handleChange}
           required
         />

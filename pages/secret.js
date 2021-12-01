@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/client";
+import Account from "../models/Account";
+import dbConnect from "../lib/dbConnect";
+import Link from "next/link";
 
-export default function Secret() {
+export default function Secret({ accounts }) {
   const [session, loading] = useSession();
   const [content, setContent] = useState();
 
@@ -23,17 +26,49 @@ export default function Secret() {
     return (
       <main>
         <div>
-          <h1> You aren't signed in, fucker.</h1>
+          <h1> You aren't signed in.</h1>
         </div>
       </main>
     );
   }
   return (
     <main>
-      <div>
-        <h1>Protected Page</h1>
-        {content}
-      </div>
+      {/* Create a card for each account */}
+      {accounts.map((account) => (
+        <div key={account._id}>
+          <div className="card">
+            <img src={account.image_url} />
+            <h5 className="account-name">{account.name}</h5>
+            <div className="main-content">
+              <p className="account-name">{account.name}</p>
+              <p className="amount">Funds: ${account.amount}</p>
+
+              <div className="btn-container">
+                <Link href="/[id]/edit" as={`/${account._id}/edit`}>
+                  <button className="btn edit">Edit</button>
+                </Link>
+                <Link href="/[id]" as={`/${account._id}`}>
+                  <button className="btn view">View</button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
     </main>
   );
+}
+
+export async function getServerSideProps() {
+  await dbConnect();
+
+  /* find all the data in our database */
+  const result = await Account.find({});
+  const accounts = result.map((doc) => {
+    const account = doc.toObject();
+    account._id = account._id.toString();
+    return account;
+  });
+
+  return { props: { accounts: accounts } };
 }

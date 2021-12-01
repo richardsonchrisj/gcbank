@@ -20,32 +20,9 @@ export default function Index({ accounts }) {
           <div>
             {" "}
             <button>
-              <Link href="/secret">To the Secret</Link>
+              <Link href="/secret">All Access</Link>
             </button>
           </div>
-
-          {/* Create a card for each account */}
-          {accounts.map((account) => (
-            <div key={account._id}>
-              <div className="card">
-                <img src={account.image_url} />
-                <h5 className="account-name">{account.name}</h5>
-                <div className="main-content">
-                  <p className="account-name">{account.name}</p>
-                  <p className="amount">Funds: ${account.amount}</p>
-
-                  <div className="btn-container">
-                    <Link href="/[id]/edit" as={`/${account._id}/edit`}>
-                      <button className="btn edit">Edit</button>
-                    </Link>
-                    <Link href="/[id]" as={`/${account._id}`}>
-                      <button className="btn view">View</button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
         </>
       )}
     </>

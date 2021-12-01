@@ -27,7 +27,7 @@ const AccountPage = ({ account }) => {
         <h5 className="account-name">{account.name}</h5>
         <div className="main-content">
           <p className="account-name">{account.name}</p>
-          <p className="password">Funds: ${account.amount}</p>
+          <p className="account-name">Funds: ${account.amount}</p>
 
           <div className="btn-container">
             <Link href="/[id]/edit" as={`/${account._id}/edit`}>

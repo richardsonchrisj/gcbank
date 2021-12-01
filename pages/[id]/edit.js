@@ -20,7 +20,6 @@ const EditAccount = () => {
 
   const accountForm = {
     name: account.name,
-    password: account.password,
     accountType: account.accountType,
     amount: account.amount,
     image_url: account.image_url,
