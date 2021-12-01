@@ -3,9 +3,8 @@ import Form from "../components/Form";
 const NewAccount = () => {
   const accountForm = {
     name: "",
-    password: "",
     accountType: false,
-    amount: 0,
+    amount: "",
     image_url: "",
   };
 

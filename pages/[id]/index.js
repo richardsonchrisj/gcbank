@@ -30,9 +30,14 @@ const AccountPage = ({ account }) => {
           <p className="account-name">Funds: ${account.amount}</p>
 
           <div className="btn-container">
-            <Link href="/[id]/edit" as={`/${account._id}/edit`}>
-              <button className="btn edit">Edit</button>
+            <Link href="/[id]/add" as={`/${account._id}/add`}>
+              <button className="btn edit">Add Funds</button>
             </Link>
+            <br />
+            <Link href="/[id]/withdraw" as={`/${account._id}/withdraw`}>
+              <button className="btn edit">Withdraw Funds</button>
+            </Link>
+            <br />
             <button className="btn delete" onClick={handleDelete}>
               Delete
             </button>
