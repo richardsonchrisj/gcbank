@@ -5,8 +5,8 @@ import { signIn, signOut, useSession } from "next-auth/client";
 export default function NavBar(user) {
   const [session, loading] = useSession();
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
-      <Container>
+    <Navbar variant="dark" expand="lg">
+      <Container fluid>
         <Navbar.Brand href="/">
           <Image
             alt=""
@@ -21,7 +21,7 @@ export default function NavBar(user) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/">Link</Nav.Link>
+            <Nav.Link href="/new">Create Account</Nav.Link>
           </Nav>
           <Nav>
             {!session && (

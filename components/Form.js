@@ -10,7 +10,6 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
 
   const [form, setForm] = useState({
     name: accountForm.name,
-    accountType: accountForm.accountType,
     amount: accountForm.amount,
     image_url: accountForm.image_url,
   });
@@ -68,7 +67,7 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
 
   const handleChange = (e) => {
     const target = e.target;
-    const value = target.name === "accountType" ? target.checked : target.value;
+    const value = target.value;
     const name = target.name;
 
     setForm({
@@ -91,7 +90,6 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
   const formValidate = () => {
     let err = {};
     if (!form.name) err.name = "Name is required";
-    if (!form.accountType) err.accountType = "accountType is required";
     if (!form.amount) err.amount = "starting amount is required";
     if (!form.image_url) err.image_url = "Image URL is required";
     return err;
@@ -109,14 +107,6 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
           value={form.name}
           onChange={handleChange}
           required
-        />
-
-        <label htmlFor="accountType">Checking account?</label>
-        <input
-          type="checkbox"
-          name="accountType"
-          checked={form.accountType}
-          onChange={handleChange}
         />
 
         <label htmlFor="amount">Funds</label>

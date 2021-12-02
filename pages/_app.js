@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <NavBar />
 
-      <div className="grid wrapper">
+      <div className="grid">
         <Component {...pageProps} />
       </div>
     </Provider>

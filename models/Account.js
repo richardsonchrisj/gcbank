@@ -7,9 +7,6 @@ const AccountSchema = new mongoose.Schema({
     maxlength: [20, "Name cannot be more than 60 characters"],
   },
 
-  accountType: {
-    type: Boolean,
-  },
   amount: {
     type: Number,
   },

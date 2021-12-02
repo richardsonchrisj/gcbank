@@ -4,9 +4,18 @@
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
+body {
+  background: #121212;
+}
+.grid {
+  display: flex;
+  flex-wrap: inherit;
+  justify-content: center;
+}
 
 .navbar {
   color: white;
+  background: #121212;
 }
 
 /* Styles for Cards */
@@ -27,8 +36,9 @@
 
 .card:hover {
   --shadow: rgba(53, 53, 53, 0.103);
-  /* transform: rotateY(180deg) translate(20px, 20px);
-  background: pink; */
+  transform: rotateY(10deg) translate(50px, 50px) scale(1.7);
+  background: pink;
+  z-index: 10;
 }
 
 .card:hover .main-content {

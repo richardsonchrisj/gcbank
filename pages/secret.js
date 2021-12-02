@@ -3,6 +3,7 @@ import { useSession } from "next-auth/client";
 import Account from "../models/Account";
 import dbConnect from "../lib/dbConnect";
 import Link from "next/link";
+import { CardGroup } from "react-bootstrap";
 
 export default function Secret({ accounts }) {
   const [session, loading] = useSession();
@@ -31,30 +32,37 @@ export default function Secret({ accounts }) {
       </main>
     );
   }
+
+  const numbersWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <main>
       {/* Create a card for each account */}
-      {accounts.map((account) => (
-        <div key={account._id}>
-          <div className="card">
-            <img src={account.image_url} />
-            <h5 className="account-name">{account.name}</h5>
-            <div className="main-content">
-              <p className="account-name">{account.name}</p>
-              <p className="amount">Funds: ${account.amount}</p>
+      <CardGroup>
+        {accounts.map((account) => (
+          <div key={account._id}>
+            <div className="card">
+              <img src={account.image_url} />
+              <h5 className="account-name">{account.name}</h5>
+              <div className="main-content">
+                <p className="account-name">{account.name}</p>
+                <p className="amount">${numbersWithCommas(account.amount)}</p>
 
-              <div className="btn-container">
-                <Link href="/[id]/edit" as={`/${account._id}/edit`}>
-                  <button className="btn edit">Edit</button>
-                </Link>
-                <Link href="/[id]" as={`/${account._id}`}>
-                  <button className="btn view">View</button>
-                </Link>
+                <div className="btn-container">
+                  <Link href="/[id]/edit" as={`/${account._id}/edit`}>
+                    <button className="btn edit">Edit</button>
+                  </Link>
+                  <Link href="/[id]" as={`/${account._id}`}>
+                    <button className="btn view">View</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </CardGroup>
     </main>
   );
 }
