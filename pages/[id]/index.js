@@ -39,10 +39,10 @@ const AccountPage = ({ account }) => {
             </Link>
             <br />
             <Link href="/[id]/withdraw" as={`/${account._id}/withdraw`}>
-              <button className="btn edit">Withdraw</button>
+              <button className="btn delete">Withdraw</button>
             </Link>
             <br />
-            <button className="btn delete" onClick={handleDelete}>
+            <button className="btn btn-danger" onClick={handleDelete}>
               Delete
             </button>
           </div>

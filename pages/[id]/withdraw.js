@@ -78,27 +78,27 @@ const WithdrawPage = ({ account }) => {
           <p className="account-name">${numbersWithCommas(balance)}</p>
           {message && <p>{message}</p>}
 
-          <div className="btn-container">
-            <button className="btn edit" onClick={takeFive}>
-              Withdraw $5
+          <div className="btn-container text-center">
+            <button className="btn delete" onClick={takeFive}>
+              $5
             </button>
 
-            <button className="btn edit" onClick={takeTen}>
-              Withdraw $10
+            <button className="btn delete" onClick={takeTen}>
+              $10
             </button>
 
-            <button className="btn edit" onClick={takeTwenty}>
-              Withdraw $20
+            <button className="btn delete" onClick={takeTwenty}>
+              $20
             </button>
 
-            <button className="btn edit" onClick={takeHundred}>
-              Withdraw $100
+            <button className="btn delete" onClick={takeHundred}>
+              $100
             </button>
-            <button className="btn edit" onClick={takeThousand}>
-              Withdraw $1,000
+            <button className="btn delete" onClick={takeThousand}>
+              $1,000
             </button>
-            <button className="btn edit" onClick={takeMillion}>
-              Withdraw $1 Million
+            <button className="btn delete" onClick={takeMillion}>
+              $1 Million
             </button>
           </div>
         </div>

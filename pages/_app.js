@@ -4,7 +4,6 @@ import "../css/form.css";
 import Head from "next/head";
 import { Provider } from "next-auth/client";
 import NavBar from "../components/navbar";
-import { Container } from "react-bootstrap";
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -54,27 +54,27 @@ const DepositPage = ({ account }) => {
           <p className="account-name">${numbersWithCommas(balance)}</p>
           {message && <p>{message}</p>}
 
-          <div className="btn-container">
+          <div className="btn-container text-center">
             <button className="btn edit" onClick={depositFive}>
-              Deposit $5
+              $5
             </button>
 
             <button className="btn edit" onClick={depositTen}>
-              Deposit $10
+              $10
             </button>
 
             <button className="btn edit" onClick={depositTwenty}>
-              Deposit $20
+              $20
             </button>
 
             <button className="btn edit" onClick={depositHundred}>
-              Deposit $100
+              $100
             </button>
             <button className="btn edit" onClick={depositThousand}>
-              Deposit $1,000
+              $1,000
             </button>
             <button className="btn edit" onClick={depositMillion}>
-              Deposit $1 Million
+              $1 Million
             </button>
           </div>
         </div>
