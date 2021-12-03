@@ -28,7 +28,9 @@ export default function NavBar(user) {
                 </Navbar.Brand>
                 <Nav.Link href="/">
                   Not signed in <br />
-                  <button onClick={signIn}>Sign in</button>
+                  <button className="btn btn-light" onClick={signIn}>
+                    Sign in
+                  </button>
                 </Nav.Link>
               </Navbar.Text>
             )}
@@ -47,7 +49,9 @@ export default function NavBar(user) {
                 <Nav.Link href="about">
                   {" "}
                   Signed in {session.user.email}{" "}
-                  <button onClick={signOut}>Sign Out</button>
+                  <button className="btn btn-light" onClick={signOut}>
+                    Sign Out
+                  </button>
                 </Nav.Link>
               </Navbar.Text>
             )}

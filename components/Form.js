@@ -146,7 +146,7 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
           required
         />
 
-        <button type="submit" className="btn">
+        <button type="submit" className="btn btn-dark">
           Submit
         </button>
       </form>
