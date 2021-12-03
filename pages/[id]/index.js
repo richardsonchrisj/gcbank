@@ -34,7 +34,7 @@ const AccountPage = ({ account }) => {
           <p className="account-name">${numbersWithCommas(account.amount)}</p>
 
           <div className="btn-container">
-            <Link href="/[id]/add" as={`/${account._id}/add`}>
+            <Link href="/[id]/deposit" as={`/${account._id}/deposit`}>
               <button className="btn edit">Deposit</button>
             </Link>
             <br />
