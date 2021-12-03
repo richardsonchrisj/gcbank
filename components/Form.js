@@ -10,6 +10,7 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
 
   const [form, setForm] = useState({
     name: accountForm.name,
+    password: accountForm.password,
     amount: accountForm.amount,
     image_url: accountForm.image_url,
   });
@@ -36,7 +37,10 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
       const { data } = await res.json();
 
       mutate(`/api/accounts/${id}`, data, false); // Update the local data without a revalidation
-      router.push("/");
+      alert(
+        `Contratulations, ${form.name} has been updated at Gotham City Bank`
+      );
+      router.push("/secret");
     } catch (error) {
       setMessage("Failed to update account");
     }
@@ -59,7 +63,10 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
         throw new Error(res.status);
       }
 
-      router.push("/");
+      alert(
+        `Contratulations, ${form.name} has opened an account at Gotham City Bank`
+      );
+      router.push("/secret");
     } catch (error) {
       setMessage("Failed to add account");
     }
@@ -90,6 +97,7 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
   const formValidate = () => {
     let err = {};
     if (!form.name) err.name = "Name is required";
+    if (!form.password) err.amount = "A password is required";
     if (!form.amount) err.amount = "starting amount is required";
     if (!form.image_url) err.image_url = "Image URL is required";
     return err;
@@ -105,6 +113,17 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
           name="name"
           autoComplete="name"
           value={form.name}
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          maxLength="20"
+          name="password"
+          autoComplete="password"
+          value={form.password}
           onChange={handleChange}
           required
         />

@@ -7,16 +7,6 @@ export default function NavBar(user) {
   return (
     <Navbar variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">
-          <Image
-            alt=""
-            src="/images/BTAS.png"
-            width="50"
-            height="50"
-            className="d-inline-block align-top"
-          />{" "}
-          Gotham City Bank
-        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -25,7 +15,17 @@ export default function NavBar(user) {
           </Nav>
           <Nav>
             {!session && (
-              <Navbar.Text className="justify-content-end">
+              <Navbar.Text className="text-end">
+                <Navbar.Brand href="/">
+                  <Image
+                    alt=""
+                    src="/images/BTAS.png"
+                    width="50"
+                    height="50"
+                    className="d-inline-block align-top"
+                  />{" "}
+                  Gotham City Bank
+                </Navbar.Brand>
                 <Nav.Link href="/">
                   Not signed in <br />
                   <button onClick={signIn}>Sign in</button>
@@ -33,7 +33,17 @@ export default function NavBar(user) {
               </Navbar.Text>
             )}
             {session && (
-              <Navbar.Text>
+              <Navbar.Text className="text-end">
+                Gotham City Bank
+                <Navbar.Brand href="/">
+                  <Image
+                    alt=""
+                    src="/images/BTAS.png"
+                    width="50"
+                    height="50"
+                    className="d-inline-block align-top"
+                  />{" "}
+                </Navbar.Brand>
                 <Nav.Link href="about">
                   {" "}
                   Signed in {session.user.email}{" "}

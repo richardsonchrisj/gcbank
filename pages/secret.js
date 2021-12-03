@@ -52,10 +52,10 @@ export default function Secret({ accounts }) {
 
                 <div className="btn-container">
                   <Link href="/[id]/edit" as={`/${account._id}/edit`}>
-                    <button className="btn edit">Edit</button>
+                    <button className="btn edit">Edit Account Details</button>
                   </Link>
                   <Link href="/[id]" as={`/${account._id}`}>
-                    <button className="btn view">View</button>
+                    <button className="btn view">Transactions</button>
                   </Link>
                 </div>
               </div>

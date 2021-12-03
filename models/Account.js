@@ -6,6 +6,11 @@ const AccountSchema = new mongoose.Schema({
     required: [true, "Please provide your name."],
     maxlength: [20, "Name cannot be more than 60 characters"],
   },
+  password: {
+    type: String,
+    required: [true, "Please provide your password."],
+    maxlength: [20, "Name cannot be more than 60 characters"],
+  },
 
   amount: {
     type: Number,

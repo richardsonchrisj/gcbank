@@ -20,6 +20,10 @@ const AccountPage = ({ account }) => {
     }
   };
 
+  const numbersWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <div key={account._id}>
       <div className="card">
@@ -27,15 +31,15 @@ const AccountPage = ({ account }) => {
         <h5 className="account-name">{account.name}</h5>
         <div className="main-content">
           <p className="account-name">{account.name}</p>
-          <p className="account-name">Funds: ${account.amount}</p>
+          <p className="account-name">${numbersWithCommas(account.amount)}</p>
 
           <div className="btn-container">
             <Link href="/[id]/add" as={`/${account._id}/add`}>
-              <button className="btn edit">Add Funds</button>
+              <button className="btn edit">Deposit</button>
             </Link>
             <br />
             <Link href="/[id]/withdraw" as={`/${account._id}/withdraw`}>
-              <button className="btn edit">Withdraw Funds</button>
+              <button className="btn edit">Withdraw</button>
             </Link>
             <br />
             <button className="btn delete" onClick={handleDelete}>

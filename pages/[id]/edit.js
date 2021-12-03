@@ -25,11 +25,17 @@ const EditAccount = () => {
   };
 
   return (
-    <Form
-      formId="edit-account-form"
-      accountForm={accountForm}
-      forNewAccount={false}
-    />
+    <div className="card">
+      <img src={account.image_url} />
+      <h5 className="account-name">{account.name}</h5>
+      <div className="main-content">
+        <Form
+          formId="edit-account-form"
+          accountForm={accountForm}
+          forNewAccount={false}
+        />
+      </div>
+    </div>
   );
 };
 

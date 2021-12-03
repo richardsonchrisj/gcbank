@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../css/style.css";
 import "../css/form.css";
 import Head from "next/head";

@@ -20,6 +20,10 @@ const WithdrawPage = ({ account }) => {
     }
   };
 
+  const numbersWithCommas = (x) => {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   const [balance, setBalance] = useState(account.amount);
 
   const takeFive = () => {
@@ -50,6 +54,20 @@ const WithdrawPage = ({ account }) => {
       setBalance(balance - 100);
     }
   };
+  const takeThousand = () => {
+    if (balance - 1000 < 0) {
+      setMessage("You've passed your maximum withdrawal!");
+    } else {
+      setBalance(balance - 1000);
+    }
+  };
+  const takeMillion = () => {
+    if (balance - 1000000 < 0) {
+      setMessage("Ha. You don't have that kind of money!");
+    } else {
+      setBalance(balance - 1000000);
+    }
+  };
   return (
     <div key={account._id}>
       <div className="card">
@@ -57,7 +75,8 @@ const WithdrawPage = ({ account }) => {
         <h5 className="account-name">{account.name}</h5>
         <div className="main-content">
           <p className="account-name">{account.name}</p>
-          <p className="account-name">Funds: ${balance}</p>
+          <p className="account-name">${numbersWithCommas(balance)}</p>
+          {message && <p>{message}</p>}
 
           <div className="btn-container">
             <button className="btn edit" onClick={takeFive}>
@@ -75,10 +94,15 @@ const WithdrawPage = ({ account }) => {
             <button className="btn edit" onClick={takeHundred}>
               Withdraw $100
             </button>
+            <button className="btn edit" onClick={takeThousand}>
+              Withdraw $1,000
+            </button>
+            <button className="btn edit" onClick={takeMillion}>
+              Withdraw $1 Million
+            </button>
           </div>
         </div>
       </div>
-      {message && <p>{message}</p>}
     </div>
   );
 };
