@@ -31,7 +31,7 @@ export default function Index({ accounts }) {
               <Image alt="" src="/images/city.jpg" width="1920" height="1080" />
             </Link>
             <Link href="/secret">
-              <h1 className="entryText">WELCOME TO GOTHAM BANK: </h1>
+              <h1 className="entryText">WELCOME TO GOTHAM CITY BANK: </h1>
             </Link>
             <Link href="/secret">
               <h2 className="entryText">CLICK TO ENTER</h2>

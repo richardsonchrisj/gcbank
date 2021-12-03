@@ -31,6 +31,7 @@ const WithdrawPage = ({ account }) => {
       setMessage("You've passed your maximum withdrawal!");
     } else {
       setBalance(balance - 5);
+      setMessage("");
     }
   };
   const takeTen = () => {
@@ -38,6 +39,7 @@ const WithdrawPage = ({ account }) => {
       setMessage("You've passed your maximum withdrawal!");
     } else {
       setBalance(balance - 10);
+      setMessage("");
     }
   };
   const takeTwenty = () => {
@@ -45,6 +47,7 @@ const WithdrawPage = ({ account }) => {
       setMessage("You've passed your maximum withdrawal!");
     } else {
       setBalance(balance - 20);
+      setMessage("");
     }
   };
   const takeHundred = () => {
@@ -52,6 +55,7 @@ const WithdrawPage = ({ account }) => {
       setMessage("You've passed your maximum withdrawal!");
     } else {
       setBalance(balance - 100);
+      setMessage("");
     }
   };
   const takeThousand = () => {
@@ -59,6 +63,7 @@ const WithdrawPage = ({ account }) => {
       setMessage("You've passed your maximum withdrawal!");
     } else {
       setBalance(balance - 1000);
+      setMessage("");
     }
   };
   const takeMillion = () => {
@@ -66,6 +71,7 @@ const WithdrawPage = ({ account }) => {
       setMessage("Ha. You don't have that kind of money!");
     } else {
       setBalance(balance - 1000000);
+      setMessage("");
     }
   };
   return (

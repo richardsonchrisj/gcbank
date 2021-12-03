@@ -38,8 +38,9 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
 
       mutate(`/api/accounts/${id}`, data, false); // Update the local data without a revalidation
       alert(
-        `Contratulations, ${form.name} has been updated at Gotham City Bank`
+        `Contratulations, ${form.name} has been updated at Gotham City Bank!`
       );
+
       router.push("/secret");
     } catch (error) {
       setMessage("Failed to update account");
