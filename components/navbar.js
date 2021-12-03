@@ -46,7 +46,7 @@ export default function NavBar(user) {
                     className="d-inline-block align-top"
                   />{" "}
                 </Navbar.Brand>
-                <Nav.Link href="about">
+                <Nav.Link href="/">
                   {" "}
                   Signed in {session.user.email}{" "}
                   <button className="btn btn-light" onClick={signOut}>

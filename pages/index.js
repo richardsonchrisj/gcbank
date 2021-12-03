@@ -27,16 +27,15 @@ export default function Index({ accounts }) {
         <>
           <div>
             {" "}
-            <Image
-              alt=""
-              src="/images/city.jpg"
-              width="1920"
-              height="1080"
-            />{" "}
+            <Link href="/secret">
+              <Image alt="" src="/images/city.jpg" width="1920" height="1080" />
+            </Link>
             <Link href="/secret">
               <h1 className="entryText">WELCOME TO GOTHAM BANK: </h1>
             </Link>
-            <h2 className="entryText">ALL ACCESS</h2>
+            <Link href="/secret">
+              <h2 className="entryText">CLICK TO ENTER</h2>
+            </Link>
           </div>
         </>
       )}
