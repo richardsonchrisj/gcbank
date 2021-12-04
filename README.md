@@ -1,4 +1,4 @@
-# Gotham City Bank
+# Gotham City Bank [gcb-img]
 
 ## You can
 
