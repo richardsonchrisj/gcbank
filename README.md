@@ -1,6 +1,6 @@
 # Gotham City Bank
 
-## Deploy your own
+## You can
 
 Once you have access to [the environment variables you'll need](#step-2-set-up-environment-variables), deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
@@ -29,13 +29,13 @@ Create the `.env.local` in the main directory (which will be ignored by Git):
 Then set each variable on `.env.local`:
 
 - `MONGODB_URI=` should be the MongoDB connection string you got from step 1.
-- `GITHUB_ID=` ******\*\*\*\*******
-- `GITHUB_SECRET=` ******\*\*\*\*******
-- `TWITTER_ID=` ******\*\*\*\*******
-- `TWITTER_SECRET=` ******\*\*\*\*******
-- `AUTH0_CLIENT_ID=` ******\*\*\*\*******
-- `AUTH0_CLIENT_SECRET=` ******\*\*\*\*******
-- `AUTH0_DOMAIN=` ******\*\*\*\*******
+- `GITHUB_ID=` **\*\***\*\*\*\***\*\***
+- `GITHUB_SECRET=` **\*\***\*\*\*\***\*\***
+- `TWITTER_ID=` **\*\***\*\*\*\***\*\***
+- `TWITTER_SECRET=` **\*\***\*\*\*\***\*\***
+- `AUTH0_CLIENT_ID=` **\*\***\*\*\*\***\*\***
+- `AUTH0_CLIENT_SECRET=` **\*\***\*\*\*\***\*\***
+- `AUTH0_DOMAIN=` **\*\***\*\*\*\***\*\***
 - `NEXTAUTH_URL=` http://localhost:3000 for local testing
 
 ### Step 3. Run Next.js in development mode
@@ -59,3 +59,5 @@ To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [
 **Important**: When you import your project on Vercel, make sure to click on **Environment Variables** and set them to match your `.env.local` file.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-mongodb-mongoose&project-name=with-mongodb-mongoose&repository-name=with-mongodb-mongoose&env=MONGODB_URI&envDescription=Required%20to%20connect%20the%20app%20with%20MongoDB&envLink=https://github.com/vercel/next.js/tree/canary/examples/with-mongodb-mongoose%23step-2-set-up-environment-variables)
+
+[gcb-img]: https://github.com/richardsonchrisj/gcbank/blob/main/public/images/BTAS.png
