@@ -63,10 +63,10 @@ The web app uses the following packages:
 - [bootstrap](https://getbootstrap.com/)
 - [mongoose](https://mongoosejs.com/)
 - [next](https://nextjs.org/)
-- [next-auth] (https://next-auth.js.org/)
+- [next-auth](https://next-auth.js.org/)
 - [react](https://reactjs.org/)
 - [react-bootstrap](https://getbootstrap.com/)
-- [swr] (https://swr.vercel.app/)
+- [swr](https://swr.vercel.app/)
 
 
 [gcb-img]: https://github.com/richardsonchrisj/gcbank/blob/main/public/images/BTAS.png
