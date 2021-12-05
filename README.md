@@ -1,10 +1,6 @@
-# Gotham City Bank [gcb-img]
+# Gotham City Bank Web App ![Gotham City Bank][gcb-img]
 
-## You can
-
-Once you have access to [the environment variables you'll need](#step-2-set-up-environment-variables), deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/richardsonchrisj/gcbank.git)
+This is a bank app designed for the [MITxPro Professional Certificate in Coding: Full Stack Development with MERN](https://xpro.mit.edu/programs/program-v1:xPRO+PCCx+R1/). It allows you to create and edit bank accounts and make deposits and withdrawals. 
 
 ## How to use
 
@@ -59,5 +55,18 @@ To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [
 **Important**: When you import your project on Vercel, make sure to click on **Environment Variables** and set them to match your `.env.local` file.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-mongodb-mongoose&project-name=with-mongodb-mongoose&repository-name=with-mongodb-mongoose&env=MONGODB_URI&envDescription=Required%20to%20connect%20the%20app%20with%20MongoDB&envLink=https://github.com/vercel/next.js/tree/canary/examples/with-mongodb-mongoose%23step-2-set-up-environment-variables)
+
+## Credits
+
+The web app uses the following packages:
+
+- [bootstrap](https://getbootstrap.com/)
+- [mongoose](https://mongoosejs.com/)
+- [next](https://nextjs.org/)
+- [next-auth] (https://next-auth.js.org/)
+- [react](https://reactjs.org/)
+- [react-bootstrap](https://getbootstrap.com/)
+- [swr] (https://swr.vercel.app/)
+
 
 [gcb-img]: https://github.com/richardsonchrisj/gcbank/blob/main/public/images/BTAS.png
