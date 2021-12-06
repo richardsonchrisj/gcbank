@@ -38,12 +38,12 @@ const AccountPage = ({ account }) => {
               <button className="btn edit">Deposit</button>
             </Link>
             <br />
-            <Link href="/[id]/withdraw" as={`/${account._id}/withdraw`}>
+            <Link href="/[id]/withdrawal" as={`/${account._id}/withdrawal`}>
               <button className="btn delete">Withdraw</button>
             </Link>
             <br />
             <button className="btn btn-danger" onClick={handleDelete}>
-              Delete
+              Delete Account
             </button>
           </div>
         </div>

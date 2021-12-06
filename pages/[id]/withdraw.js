@@ -82,6 +82,9 @@ const WithdrawPage = ({ account }) => {
         <div className="main-content">
           <p className="account-name">{account.name}</p>
           <p className="account-name">${numbersWithCommas(balance)}</p>
+          <p className="account-name">
+            New Balance: ${numbersWithCommas(accountForm.amount)}
+          </p>
           {message && <p>{message}</p>}
 
           <div className="btn-container text-center">
