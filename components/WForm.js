@@ -112,6 +112,7 @@ const WForm = ({ formId, accountForm, forNewAccount = true }) => {
         ...form,
         amount: (accountForm.amount -= 5),
       });
+      setMessage("");
     }
   };
   const wd10 = () => {
@@ -122,6 +123,7 @@ const WForm = ({ formId, accountForm, forNewAccount = true }) => {
         ...form,
         amount: (accountForm.amount -= 10),
       });
+      setMessage("");
     }
   };
   const wd20 = () => {
@@ -132,6 +134,7 @@ const WForm = ({ formId, accountForm, forNewAccount = true }) => {
         ...form,
         amount: (accountForm.amount -= 20),
       });
+      setMessage("");
     }
   };
   const wd100 = () => {
@@ -142,6 +145,7 @@ const WForm = ({ formId, accountForm, forNewAccount = true }) => {
         ...form,
         amount: (accountForm.amount -= 100),
       });
+      setMessage("");
     }
   };
   const wd1000 = () => {
@@ -152,6 +156,7 @@ const WForm = ({ formId, accountForm, forNewAccount = true }) => {
         ...form,
         amount: (accountForm.amount -= 1000),
       });
+      setMessage("");
     }
   };
   const wd1m = () => {
@@ -162,6 +167,7 @@ const WForm = ({ formId, accountForm, forNewAccount = true }) => {
         ...form,
         amount: (accountForm.amount -= 1000000),
       });
+      setMessage("");
     }
   };
 
