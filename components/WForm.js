@@ -10,6 +10,7 @@ const WForm = ({ formId, accountForm, forNewAccount = true }) => {
 
   const [form, setForm] = useState({
     name: accountForm.name,
+    email: accountForm.email,
     password: accountForm.password,
     amount: accountForm.amount,
     image_url: accountForm.image_url,
@@ -98,6 +99,7 @@ const WForm = ({ formId, accountForm, forNewAccount = true }) => {
   const formValidate = () => {
     let err = {};
     if (!form.name) err.name = "Name is required";
+    if (!form.email) err.amount = "An email address is required";
     if (!form.password) err.amount = "A password is required";
     if (!form.amount) err.amount = "starting amount is required";
     if (!form.image_url) err.image_url = "Image URL is required";
