@@ -48,7 +48,7 @@ export default function NavBar(user) {
                 </Navbar.Brand>
                 <Nav.Link href="/">
                   {" "}
-                  Signed in {session.user.email}{" "}
+                  Signed in as {session.user.name} <p>{session.user.email}</p>
                   <button className="btn btn-light" onClick={signOut}>
                     Sign Out
                   </button>
