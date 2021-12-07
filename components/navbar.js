@@ -12,6 +12,8 @@ export default function NavBar(user) {
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/new">Create Account</Nav.Link>
+            <Nav.Link href="/personal">Personal Checking</Nav.Link>
+            <Nav.Link href="/secret">All Access</Nav.Link>
           </Nav>
           <Nav>
             {!session && (

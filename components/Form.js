@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { mutate } from "swr";
+import Link from "next/link";
 
 const Form = ({ formId, accountForm, forNewAccount = true }) => {
   const router = useRouter();
@@ -162,6 +163,10 @@ const Form = ({ formId, accountForm, forNewAccount = true }) => {
         <button type="submit" className="btn btn-dark">
           Submit
         </button>
+
+        <Link href="/" as={`/`}>
+          <button className="btn edit">Cancel</button>
+        </Link>
       </form>
       <p>{message}</p>
       <div>
